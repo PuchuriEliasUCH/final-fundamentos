@@ -31,7 +31,7 @@ def buscar_por_nombre(nombre = str):
         for resultado in resultados:
             print(f"""==== {resultado['codigo']} ====
 nombre: {resultado['nombre']} {resultado['apellido']}
-area: {areas[resultado['area'] - 1]['nombre']}
+area: {resultado['area']}
 número: {resultado['numero']}
 correo: {resultado['correo']}
 """)
@@ -39,4 +39,7 @@ correo: {resultado['correo']}
         print("No hay resultados para su busqueda")
 
     
+def funcion_de_fer():
+    print("🐿️🐿️")
 
+funcion_de_fer()
