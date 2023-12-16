@@ -20,3 +20,8 @@ def read_data():
         data = json.load(doc)
 
     return data
+
+def write_json(data):
+    with open('data.json', 'w') as doc:
+        json.dump(data, doc)
+

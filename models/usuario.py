@@ -1,12 +1,17 @@
 class Usuario():
-    def __init__(self, codigo, nombre, apellido, numero, correo):
+    def __init__(self, codigo, nombre, apellido, area, numero, correo):
         self.__codigo = codigo
         self.__nombre = nombre.title()
         self.__apellido = apellido.title()
+        self.__area = area
         self.__numero = numero
         self.__correo = correo
         self.__activo = True
     
+    @property
+    def codigo(self):
+        return self.__codigo
+
     # Nombre
     @property
     def nombre(self):
@@ -25,6 +30,15 @@ class Usuario():
     def apellido(self, apellido):
         self.__apellido = apellido
       
+    # Area
+    @property
+    def area(self):
+        return self.__area
+    
+    @area.setter
+    def area(self, area):
+        self.__area = area
+
     # Número
     @property
     def numero(self):
