@@ -25,3 +25,6 @@ def write_json(data):
     with open('data.json', 'w') as doc:
         json.dump(data, doc)
 
+def trabajadores():
+    return list(filter(lambda x: x['activo'] == True, read_data()['trabajadores']))
+
